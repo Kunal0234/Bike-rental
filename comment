@@ -1,0 +1,123 @@
+// // import React from "react";
+
+// // const BookingModel = ({ car, onClose }: { car: any; onClose: () => void }) => {
+// //   return (
+// //     <div
+// //       className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl" // Made it wider
+// //       onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
+// //     >
+// //       <h3 className="font-bold text-2xl">Hello!</h3>
+// //       <p className="py-6 text-lg">
+// //         You selected: <span className="font-bold">{car.name}</span>
+// //       </p>
+// //       <div className="flex justify-end">
+// //         <button
+// //           className="btn bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md"
+// //           onClick={onClose}
+// //         >
+// //           Close
+// //         </button>
+// //       </div>
+// //     </div>
+// //   );
+// };
+
+// export default BookingModel;
+
+// import React, { useState } from "react";
+// import CarCard from "./CarCard";
+// import BookingModel from "./Bookingmodel";
+
+// function CarsList({ carsList }: { carsList: any[] }) {
+//   const [selectedCar, setSelectedCar] = useState<any>(null);
+
+//   const handleOpenModal = (car: any) => {
+//     setSelectedCar(car);
+//   };
+
+//   const handleCloseModal = () => {
+//     setSelectedCar(null);
+//   };
+
+//   return (
+//     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+//       {carsList.map((car, index) => (
+//         <div key={index} onClick={() => handleOpenModal(car)}>
+//           <CarCard car={car} />
+//         </div>
+//       ))}
+
+//       {/* Modal */}
+//       {selectedCar && (
+//         <div
+//           className="fixed inset-0 flex items-center justify-center z-50"
+//           onClick={handleCloseModal} // Close modal on background click
+//         >
+//           <BookingModel car={selectedCar} onClose={handleCloseModal} />
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default CarsList;
+// // <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-70 z-50">
+
+// import React, { useState } from "react";
+// import CarCard from "./CarCard";
+// import BookingModel from "./Bookingmodel";
+
+// function CarsList({ carsList }: { carsList: any[] }) {
+//   const [selectedCar, setSelectedCar] = useState<any>(null);
+
+//   const handleOpenModal = (car: any) => {
+//     setSelectedCar(car);
+//   };
+
+//   const handleCloseModal = () => {
+//     setSelectedCar(null);
+//   };
+
+//   return (
+//     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+//       {carsList.map((car, index) => (
+//         <div key={index} onClick={() => handleOpenModal(car)}>
+//           <CarCard car={car} />
+//         </div>
+//       ))}
+
+//       {/* Modal */}
+//       {selectedCar && (
+//         <div
+//           className="fixed inset-0 flex items-center justify-center z-50"
+//           onClick={handleCloseModal} // Close modal on background click
+//         >
+//           <BookingModel car={selectedCar} onClose={handleCloseModal} />
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default CarsList;
+
+// import React from "react";
+
+// const Bookingmodel = ({ car }: any) => {
+//   return (
+//     <div>
+//       <form
+//         method="dialog"
+//         className="   modal-box  rounded-lg p-8  w-5xl h-[200px] "
+//       >
+//         <h3 className="font-bold text-lg">Hello!</h3>
+//         <p className="text-sm">Click the button below to close</p>
+//         <div className="modal-action">
+//           <button className="btn btn-sm">Close</button>
+//         </div>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default Bookingmodel;
